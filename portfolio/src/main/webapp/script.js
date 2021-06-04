@@ -26,3 +26,15 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function addRandomImage() {
+  const images =
+      [<img src="images/image_1.jpg" />, <img src="images/image_2.jpg" />, <img src="images/image_3.png" />, <img src="images/image_4.jpg" />,<img src="images/image_5.jpg" />];
+
+  // Pick a random image.
+  const image = images[Math.floor(Math.random() * images.length)];
+
+  // Add it to the page.
+  const imageContainer = document.getElementById('image-container');
+  imageContainer.innerText = image;
+}

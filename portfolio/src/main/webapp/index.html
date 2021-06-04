@@ -1,19 +1,59 @@
 <!DOCTYPE html>
+
+<! –– Poor attempt at trying to append random images ––>
+<script type="text/javascript">
+function randomImages() {
+    var images = new Array();
+    images[1] = "images/image_1.jpg";
+    images[2] = "images/image_2.jpg";
+    images[3] = "images/image_3.png";
+    images[4] = "images/image_4.jpg";
+    images[5] = "images/image_5.jpg";
+    var rnd = Math.floor(Math.random() * images.length);
+    if (rnd == 0) {
+            rnd = 1;
+    }
+    document.write('<img src="' + images[rnd] + '">');
+    //$("#content").html('<img src="' + images[rnd] + '">'); // appends image to the end of div. (in theory)
+}
+</script>
+
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Kelvin's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <h1>Kelvin's Portfolio</h1>
+      <img src="images/47598362.jpg" />
+      <p>Hi! My name is Kelvin Torres and this is my attempt at making a portfolio. A little bit about myself: 
+          I'm a junior computer engineering student living on Puerto Rico. Currently, I have intermediate knowledge in C++, Python and Java. I'm also a 
+          volunteer programming tutor.
+
+          I like to collect vintage video games and arcade cabinets, especially Neo Geo games, as a hobby and have only recently started gardening.</p>
+
+      <p><a href="https://www.linkedin.com/in/kelvin-torres-0075451a9/">This is my LinkedIn page.</a></p>
+      <p><a href="https://github.com/Zef14">This is my Github page.</a></p>
+
+      <p>My favorite place overall is my hometown, Barranquitas. I love the mountains, the fresh air and the open space!</p>
+      <img src="images/image6.jpg" />
+
+      <p>This the the view from my window</p>
+      <img src="images/image0.jpg" />
+
+      <h2>List of projects I've worked on:</h2>
+      <ul>
+        <li>Swing States Votes analyzer using C++</li>
+        <li>University Faculty Evaluation program using Java</li>
+      </ul>
+
+      <p>Click here to get a random image: (WARNING: Will re-write entire document. Need to restart to reset page.)</p>
+      <input class="randombutton" style="float: left;" type="button" value="Meme" onclick="randomImages();"/>
+      
     </div>
   </body>
 </html>
+
